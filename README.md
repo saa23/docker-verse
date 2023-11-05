@@ -157,7 +157,7 @@ To run the docker-compose file
 docker-compose up
 ```
 
-but if your docker-compose file **not** named `docker-compose.yml`, for example `my-docker-compose.yml`, use this command
+but if your docker-compose file **not** named `docker-compose.yml`, suppose named `my-docker-compose.yml`, use this command
 ```
 docker-compose -f my-docker-compose.yml up
 ```
