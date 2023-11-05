@@ -1,6 +1,6 @@
 # Docker-Verse
 
-## Fundamental Terms in Docker
+## 1. Fundamental Terms in Docker
 - Image 
 
 Read-only templates that contains a set of instructions for creating a Docker container. Images are used as the foundation for running containers. They are often built from a *Dockerfile*.
@@ -29,7 +29,7 @@ Labels that typically specify a particular version of a Docker Image.
 
 Files that defining the instructions of multi-container (multi-service) and the configurations. 
 
-## Basic Commands in Docker
+## 2. Basic Commands in Docker
 ### pulling an image
 ```
 docker pull <IMAGE_NAME>:<TAG>
@@ -81,7 +81,7 @@ for example:
 docker exec -it metabase /bin/bash
 ```
 
-## Build a Docker Image
+## 3. Build a Docker Image
 To build a docker image usually we need to create a **Dockerfile** file.
 
 Firstly, here are some basic command in Dockerfile file:
@@ -148,3 +148,16 @@ docker run hello_person
 
 
 ### Exercise 3: Build an image from  docker-compose
+in this exercise, we will build a container which have multi-service (Elasticsearch and Kibana) within it.
+Thus we need:
+- Docker compose file name `docker-compose.yml` (provided in this repo)
+
+To run the docker-compose file
+```
+docker-compose up
+```
+
+but if your docker-compose file **not** named `docker-compose.yml`, for example `my-docker-compose.yml`, use this command
+```
+docker-compose -f my-docker-compose.yml up
+```
